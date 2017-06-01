@@ -38,20 +38,27 @@ You're reading it!
 
 ### Notebook Analysis
 #### 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
-Here is an example of how to include an image in your writeup.
+
+In the notebook, the only code that I needed to modefy was in the preception step.  There code was needed to call all of the functions that would make the perception step work.  This was done.
 
 ![alt text][image1]
 
 #### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result. 
-And another! 
+
+This was done.
 
 ![alt text][image2]
 ### Autonomous Navigation and Mapping
 
 #### 1. Fill in the `perception_step()` (at the bottom of the `perception.py` script) and `decision_step()` (in `decision.py`) functions in the autonomous mapping scripts and an explanation is provided in the writeup of how and why these functions were modified as they were.
 
+The only major modification that was made to the test scripts was to add in two additional copies of the rover camara that are thresholded differiently, one for obstacles and one for rock sample identification. To do this the "color_thresh" function was changed to return two images, one that will test the same for red, green and blue, and one that will select pixels that are above threshold for red and green but below threshold for blue.  This modification allows the two different binary images to be uesed for the light colored sand as naviagable terrian, selceted on all three above threshold, and for the yellow rock samples, which is identified by the missing the blue channle but otherwise is the same as the first.  The third image is created by taking the inverse of the navagable terrain image useing "1-path_threshold_image" to invert the binary image. This is possible because if it was not identified as the light colored path it must be un-navagable terriane.  The code presented in the "perception_step()" function is other wise the same as in the test notebook.
+
+The "decision_step()" funciton...
 
 #### 2. Launching in autonomous mode your rover can navigate and map autonomously.  Explain your results and how you might improve them in your writeup.  
+
+
 
 **Note: running the simulator with different choices of resolution and graphics quality may produce different results, particularly on different machines!  Make a note of your simulator settings (resolution and graphics quality set on launch) and frames per second (FPS output to terminal by `drive_rover.py`) in your writeup when you submit the project so your reviewer can reproduce your results.**
 
