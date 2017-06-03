@@ -39,7 +39,7 @@ You're reading it!
 ### Notebook Analysis
 #### 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
 
-In the notebook, the only code that I needed to modefy was in the preception step.  There code was needed to call all of the functions that would make the perception step work.  This was done.
+There are three manin steps to processing the image so that the rover can use it to navagte its environment:  
 
 ![alt text][image1]
 
