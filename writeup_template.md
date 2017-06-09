@@ -25,6 +25,7 @@
 [image1]: ./misc/rover_image.jpg
 [image2]: ./calibration_images/example_grid1.jpg
 [image3]: ./calibration_images/example_rock1.jpg 
+[movie1]: C:/Users/Daniel/Desktop/RoboND-Rover-Project-master/output
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -39,14 +40,15 @@ You're reading it!
 ### Notebook Analysis
 #### 1. Run the functions provided in the notebook on test images (first with the test data provided, next on data you have recorded). Add/modify functions to allow for color selection of obstacles and rock samples.
 
-There are three manin steps to processing the image so that the rover can use it to navagte its environment:  
+There are three manin steps to processing the image so that the rover can use it to navagte its environment: perform a prespective transform, apply a color threshold and determin a path.  The perspective transform is used to turn the 2d image that the rover collects with its camara sensor into a map of the environment that accuratly stores the location of objects in the environment.  It is accomplished using refference points corrliating to a perfect square on the ground, in the raw image this square will be distorted by the perspcetive, but if the four points of the square's corrners are provided (should alwasy be consistant) then the angle of distortion can be determined and corrected for.  Using this method it is possible to create a top down world view of the rovers environment, however this process has its limitations in that the ground must be flat and the rover must also be sitting flat, no pitch or roll, else the map will not be accurate.  
+  The second process is to apply a color thershold to the map image, or the raw image the order does not matter.  This will allow the rover to
 
 ![alt text][image1]
 
 #### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result. 
 
 This was done.
-
+![alt text][movie1]
 ![alt text][image2]
 ### Autonomous Navigation and Mapping
 
