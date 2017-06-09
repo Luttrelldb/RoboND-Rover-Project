@@ -22,9 +22,9 @@
 
 [//]: # (Image References)
 
-[image1]: ./misc/rover_image.jpg
+[image1]: ./misc/Rover_image_manipulation.jpg
 [image2]: ./calibration_images/example_grid1.jpg
-[image3]: ./calibration_images/example_rock1.jpg 
+###[image3]: ./misc/rover_direction.jpg
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -45,9 +45,9 @@ There are three manin steps to processing the image so that the rover can use it
       The third step is to take the thresholded image of navagiable terrain and find the average angle of all the pixels to the robot location.  This will provide a direction for the robot to drive, if the angles are to the right of the robot it will turn to the right and vice versa for the left(5).
 
 
-1-4 ![alt text][image2]
-5 ![alt text][image2]
-6 ![alt text][image3]
+1-4 ![alt text][image1]
+5 ![alt text][image3]
+6 ![alt text][image2]
 
 #### 1. Populate the `process_image()` function with the appropriate analysis steps to map pixels identifying navigable terrain, obstacles and rock samples into a worldmap.  Run `process_image()` on your test data using the `moviepy` functions provided to create video output of your result.
 
