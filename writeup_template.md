@@ -24,7 +24,7 @@
 
 [image1]: ./misc/Rover_image_manipulation.jpg
 [image2]: ./calibration_images/example_grid1.jpg
-###[image3]: ./misc/rover_direction.jpg
+[image3]: ./misc/rover_direction.jpg
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/916/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
